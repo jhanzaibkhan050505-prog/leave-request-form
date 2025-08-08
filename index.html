@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leave Request Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Leave Request Form</h1>
+        <form id="leaveRequestForm">
+            <div class="form-group">
+                <label for="team">Team / Department</label>
+                <select id="team" name="team" required>
+                    <option value="" disabled selected>Select your team</option>
+                    <option value="Support">Support</option>
+                    <option value="Sales">Sales</option>
+                    <option value="HR">HR</option>
+                    <option value="IT">IT</option>
+                    <option value="Finance">Finance</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="employeeName">Employee Name</label>
+                <input type="text" id="employeeName" name="employeeName" required>
+            </div>
+            <div class="form-group">
+                <label for="employeeId">Employee ID</label>
+                <input type="text" id="employeeId" name="employeeId" required>
+            </div>
+            <div class="form-group">
+                <label for="leaveType">Leave Type</label>
+                <select id="leaveType" name="leaveType" required>
+                    <option value="" disabled selected>Select leave type</option>
+                    <option value="Sick Leave">Sick Leave</option>
+                    <option value="Annual Leave">Annual Leave</option>
+                    <option value="Emergency Leave">Emergency Leave</option>
+                    <option value="Unpaid Leave">Unpaid Leave</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Leave Duration Type</label>
+                <div class="radio-group">
+                    <input type="radio" id="specificDate" name="duration" value="specific" checked>
+                    <label for="specificDate">Specific Date</label>
+                    <input type="radio" id="dateRange" name="duration" value="range">
+                    <label for="dateRange">Date Range</label>
+                </div>
+            </div>
+            <div id="date-inputs">
+                <div class="form-group" id="specific-date-group">
+                    <label for="leaveDate">Leave Date</label>
+                    <input type="date" id="leaveDate" name="leaveDate">
+                </div>
+                <div class="form-group" id="date-range-group" style="display: none;">
+                    <label for="fromDate">From Date</label>
+                    <input type="date" id="fromDate" name="fromDate">
+                    <label for="toDate">To Date</label>
+                    <input type="date" id="toDate" name="toDate">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="reason">Reason / Notes</label>
+                <textarea id="reason" name="reason" rows="4"></textarea>
+            </div>
+            <button type="submit" id="submitButton">Submit Request</button>
+        </form>
+        <div id="confirmationMessage" style="display: none;">
+            <p>Request submitted successfully.</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

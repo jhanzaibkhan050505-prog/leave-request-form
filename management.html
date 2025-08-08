@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leave Management Portal</title>
+    <link rel="stylesheet" href="style.css"> <!-- We can reuse some styles -->
+    <link rel="stylesheet" href="management-style.css"> <!-- Portal-specific styles -->
+</head>
+<body>
+    <div class="portal-container">
+        <h1>Management Portal</h1>
+        <div class="tab-buttons">
+            <button class="tab-link active" onclick="filterRequests('Pending')">Pending</button>
+            <button class="tab-link" onclick="filterRequests('Approved')">Approved</button>
+            <button class="tab-link" onclick="filterRequests('Declined')">Declined</button>
+        </div>
+
+        <div id="requests-table-container">
+            <!-- Requests will be loaded here by JavaScript -->
+            <p id="loading-message">Loading requests...</p>
+        </div>
+    </div>
+
+    <!-- Modal for Decline Reason -->
+    <div id="declineModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Decline Reason</h2>
+            <p>Please provide a reason for declining this request.</p>
+            <textarea id="managerNotes" rows="4"></textarea>
+            <button id="confirmDecline">Confirm Decline</button>
+        </div>
+    </div>
+
+    <script src="management-script.js"></script>
+</body>
+</html>
