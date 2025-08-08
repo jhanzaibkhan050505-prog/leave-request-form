@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
             data[key] = value;
         });
 
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbyON7WC-RpY0dnhSuT5_c2xfE056MCqYHRSjbtfY75qXFq0oA0zKwcq_NE6ZpSpRdHJ3w/exec';
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwPB3z6Fz6DjjQ9Fp2PL2d_3KcI5GMl8nmi9roAqHqHwcGNPc8Dd1hNdM1Y8eL5zGH8ww/exec';
 
         // Disable button to prevent multiple submissions
         submitButton.disabled = true;
@@ -81,4 +81,5 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Initial call to set the correct date input visibility
     toggleDateInputs();
+
 });
